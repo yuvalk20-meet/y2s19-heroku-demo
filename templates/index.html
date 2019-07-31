@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Servers</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<div id="logo">
+	<img class="im" src="{{url_for('static', filename='images/logo.jpg')}}" >
+</div>
+<div>
+	<form action="/icecream" method="post">
+		<input type="radio" name="flavor" value="chocolate">Chocolate
+		<br>
+		<input type="radio" name="flavor" value="vanilla" checked>Vanilla
+		<br>
+		<input type="radio" name="flavor" value="darkchocolate">Dark Chocolate
+		<br>
+		<input type="checkbox" name="vehicle" value="Bike">
+		<img class="im" src="{{url_for('static', filename='images/spri.png')}}">
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+</div>
+
+</body>
+</html>

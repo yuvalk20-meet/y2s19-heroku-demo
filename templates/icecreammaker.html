@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make Your Ice Cream!</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylemaker.css') }}">
+</head>
+<body>
+<div id="logo">
+	<img class="imag" src="{{url_for('static', filename='images/logo.jpg')}}" >
+</div>
+<h1>Let's Make Your Ice Cream</h1>
+	{% if flavor == "chocolate" %}
+	<img class="imag" src="http://cdn.shopify.com/s/files/1/1889/5887/products/chocolate_date_copy_1024x1024.png?v=1531413876">
+
+	<img class="imag" id="cone" src="https://www.nissei-com.co.jp/images/pic_co_cone03.png">
+	<p>Chocolate was chosen</p>
+	{% elif flavor == "darkchocolate" %}
+	<p>Dark Chocolate was chosen</p>
+	{% elif flavor == "vanilla" %}
+	<p>Vanilla was chosen</p>
+	{% endif %}
+
+</body>
+</html>
